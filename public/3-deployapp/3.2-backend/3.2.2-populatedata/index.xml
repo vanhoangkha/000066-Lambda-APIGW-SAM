@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Populate the DynamoDB Table on Serverless with Lambda, API Gateway and SAM</title>
+    <link>/3-deployapp/3.2-backend/3.2.2-populatedata/</link>
+    <description>Recent content in Populate the DynamoDB Table on Serverless with Lambda, API Gateway and SAM</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/3-deployapp/3.2-backend/3.2.2-populatedata/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
