@@ -45,7 +45,7 @@ unzip theme-park-frontend-202110.zip
 
 ```
 git init -b main
-git add.
+git add .
 git commit -am "First commit"
 ```
 

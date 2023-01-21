@@ -58,7 +58,7 @@ This process will take a few minutes to deploy. You can see the deployment progr
 
 ```
 cd ~/environment/sampleapp/theme-park-backend/1-app-deploy/sam-app/
-Sam build
+sam build
 sam package --output-template-file packaged.yaml --s3-bucket $s3_deploy_bucket
 sam deploy --template-file packaged.yaml --stack-name theme-park-backend --capabilities CAPABILITY_IAM
 
