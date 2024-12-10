@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Creating Photo-Compositing Lambda function :: SERVERLESS WITH LAMBDA, API GATEWAY AND SAM</title>
 
     
-    <link href="/css/nucleus.css?1701082908" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701082908" rel="stylesheet">
-    <link href="/css/hybrid.css?1701082908" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701082908" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701082908" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701082908" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701082908" rel="stylesheet">
-    <link href="/css/theme.css?1701082908" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701082908" rel="stylesheet">
+    <link href="/css/nucleus.css?1733805990" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733805990" rel="stylesheet">
+    <link href="/css/hybrid.css?1733805990" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733805990" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733805990" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733805990" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733805990" rel="stylesheet">
+    <link href="/css/theme.css?1733805990" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733805990" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701082908" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733805990" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701082908"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733805990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701082908"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701082908"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733805990"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733805990"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701082908"></script>
+<script type="text/javascript" src="/js/search.js?1733805990"></script>
 
     
   </div>
@@ -605,7 +605,7 @@
   
     
     <li data-nav-id="/5-on-ridesphotoprocessing/5.1-backend/5.1.2-photocompositinglambda/" title="Creating Photo-Compositing Lambda function" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -813,7 +813,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -937,7 +937,7 @@
 <p>In the Cloud9 file explorer console, navigate to and open <strong>theme-park-backend\3-photos\2-compositing\template.yaml</strong> to review its contents.</p>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00086.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00086.png?featherlight=false&width=90pc"></p>
 <p>SAM will read this file and convert this YAML into infrastructure. Some important sections include:</p>
 <ul>
 <li><strong>Parameters</strong>: the function needs to know the name of the final bucket, so you can provide this as a parameter to the template.</li>
@@ -960,7 +960,7 @@ It provides an IAM policy to allow function access to S3.</li>
 <li>You can see the name of the final S3 bucket using the following command which has been stored as an environment variable <strong>$FINAL_BUCKET</strong>. <strong>SAM</strong> will be configured to use this s3 bucket name to set the environment variable in the Lambda function.</li>
 </ol>
 <pre tabindex="0"><code>aws s3 ls | grep finalbucket
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00087.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00087.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>In the terminal, executing the following SAM CLI commands will create the SAM application, package the code with the same SAM S3 deployment pool that was previously used, and then deploy the application specifying the Final bucket S3 name for Lambda function to use:</li>
 </ol>
@@ -969,25 +969,25 @@ It provides an IAM policy to allow function access to S3.</li>
 sam package --output-template-file packaged.yaml --s3-bucket $s3_deploy_bucket
 
 sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabilities CAPABILITY_IAM --parameter-overrides &#34;FinalBucketName&#34;=$FINAL_BUCKET
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00088.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00088.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>This will take a few minutes to deploy - wait for a confirmation message in the console before continuing.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00089.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00089.png?featherlight=false&width=90pc"></p>
 <h4 id="add-s3-trigger">Add S3 trigger</h4>
 <p>Now that you have created the Lambda function, you need to configure what it is called. This aggregate function needs to execute when a new object is passed into the processor. In this section, you will create this trigger.</p>
 <ol>
 <li>Go to the Lambda console - from the AWS Management Console, select <strong>Service</strong> and then select <strong>Lambda</strong>. Make sure your region is correct.</li>
 <li>Select the function named <strong>theme-park-photos-CompositeFunction-XXXXXXXXX</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00090.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00090.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>In the Lambda function interface</li>
 </ol>
 <ul>
 <li>Select <strong>+ Add Trigger</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00091.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00091.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>In <strong>Trigger configuration</strong></li>
 </ol>
@@ -998,11 +998,11 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabi
 <li>Check <strong>Recursive invocation acknowledgment</strong></li>
 <li>Select <strong>Add</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00092.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00092.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Complete <strong>Add trigger S3</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00093.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00093.png?featherlight=false&width=90pc"></p>
 <h4 id="test-function">Test function</h4>
 <p>Now you will test the function using a test image containing a photo of a person on a green background. You would copy this image into the upload bucket and see the result in the final bucket.</p>
 <ol>
@@ -1018,12 +1018,12 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabi
 <li>Copy the local test image to your upload bucket. The command will use the pre-created environment variable $UPLOAD_BUCKET which is set to this bucket name:</li>
 </ol>
 <pre tabindex="0"><code>aws s3 cp ./green-screen-test.png s3://$UPLOAD_BUCKET
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00094.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00094.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>In another tab, open the S3 console.</li>
 <li>Select <strong>theme-park-backend-finalbucket</strong>.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00095.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00095.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>
 <p>Test <strong>green-screen-test.jpg</strong>,</p>
@@ -1033,11 +1033,11 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabi
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00096.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00096.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>You should see a photo of a person whose blue background has been removed and is now paired with the theme park background and logo graphic.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00097.png?featherlight=false&amp;width=30pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00097.png?featherlight=false&width=30pc"></p>
 
 
 
@@ -1455,19 +1455,19 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabi
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701082908"></script>
-    <script src="/js/jquery.sticky.js?1701082908"></script>
-    <script src="/js/featherlight.min.js?1701082908"></script>
-    <script src="/js/highlight.pack.js?1701082908"></script>
+    <script src="/js/clipboard.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733805990"></script>
+    <script src="/js/jquery.sticky.js?1733805990"></script>
+    <script src="/js/featherlight.min.js?1733805990"></script>
+    <script src="/js/highlight.pack.js?1733805990"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701082908"></script>
-    <script src="/js/learn.js?1701082908"></script>
-    <script src="/js/hugo-learn.js?1701082908"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733805990"></script>
+    <script src="/js/learn.js?1733805990"></script>
+    <script src="/js/hugo-learn.js?1733805990"></script>
 
-    <link href="/mermaid/mermaid.css?1701082908" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701082908"></script>
+    <link href="/mermaid/mermaid.css?1733805990" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733805990"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

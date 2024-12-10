@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Backend Deployment :: SERVERLESS WITH LAMBDA, API GATEWAY AND SAM</title>
 
     
-    <link href="/css/nucleus.css?1701082908" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701082908" rel="stylesheet">
-    <link href="/css/hybrid.css?1701082908" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701082908" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701082908" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701082908" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701082908" rel="stylesheet">
-    <link href="/css/theme.css?1701082908" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701082908" rel="stylesheet">
+    <link href="/css/nucleus.css?1733805990" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733805990" rel="stylesheet">
+    <link href="/css/hybrid.css?1733805990" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733805990" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733805990" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733805990" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733805990" rel="stylesheet">
+    <link href="/css/theme.css?1733805990" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733805990" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701082908" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733805990" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701082908"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733805990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701082908"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701082908"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733805990"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733805990"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701082908"></script>
+<script type="text/javascript" src="/js/search.js?1733805990"></script>
 
     
   </div>
@@ -452,7 +452,7 @@
   
     
     <li data-nav-id="/4-realtime-ridewaittimes/4.1-backend/" title="Backend Deployment" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -813,7 +813,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -927,7 +927,7 @@ Finally, you will update the front-end application configuration to listen to th
 </li>
 </ul>
 <h4 id="the-real-time-serverless-backend">The Real-Time Serverless Backend</h4>
-<p><img src="/images/4-ridewaittimes/4.1-backend/module3-overview.png?featherlight=false&amp;width=60pc" alt="The Real-Time Serverless Backend"></p>
+<p><img alt="The Real-Time Serverless Backend" src="/images/4-ridewaittimes/4.1-backend/module3-overview.png?featherlight=false&width=60pc"></p>
 <ul>
 <li>Flow &amp; Traffic Controllers have been deployed and updates are published to the SNS topic.
 The Lambda function receives the new message as an event payload and parses the message. It then stores the message in the DynamoDB table and forwards it to the IoT topic.</li>
@@ -945,7 +945,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 <div class="notices info" ><p>Environment variables are not stored in the terminal. Any time you close Cloud9 or open a new terminal, you will need to run these commands again to set the environment variables. This section is provided in each module.</p>
 </div>
 
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00042.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00042.png?featherlight=false&width=90pc"></p>
 <h4 id="create-lambda-function">Create Lambda function</h4>
 <ol start="2">
 <li>
@@ -956,7 +956,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00043.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00043.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>
 <p>In the <strong>Create function</strong> page</p>
@@ -969,7 +969,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00044.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00044.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>For <strong>Change default execution</strong></p>
@@ -980,11 +980,11 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00045.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00045.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Complete function creation. Next, we choose <strong>+ Add trigger</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00046.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00046.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>
 <p>Execute <strong>Trigger configuration</strong></p>
@@ -995,14 +995,14 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00047.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00047.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>After <strong>Trigger configuration</strong> is successful.</li>
 </ol>
 <ul>
 <li>Select <strong>Code</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00048.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00048.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>
 <p>Return to <strong>Cloud9 tab</strong>.</p>
@@ -1014,7 +1014,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00049.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00049.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Return to <strong>Lambda console</strong>.</li>
 </ol>
@@ -1022,7 +1022,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 <li>Select <strong>index.js</strong>.</li>
 <li>Paste the code of <strong>app.js</strong> in.</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00050.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00050.png?featherlight=false&width=90pc"></p>
 <p>This Lambda function code reads the latest message from the SNS topic, writes it to the DynamoDB table, and then pushes the message to the front-end application via the IoT topic.</p>
 <h4 id="add-environment-variables">Add environment variables</h4>
 <p>This function uses three environment variables:</p>
@@ -1044,7 +1044,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 <li>Next, enter the following command to retrieve the value for <strong>DDB_TABLE_NAME</strong>:</li>
 </ol>
 <pre tabindex="0"><code>aws dynamodb list-tables | grep backend
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00051.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00051.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>Go back to the browser tab with <strong>theme-park-ridetimes Lambda function</strong> open.</p>
@@ -1055,7 +1055,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00052.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00052.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>
 <p>Select <strong>Add environment variable</strong> three times to enter the following three environment variables:</p>
@@ -1067,11 +1067,11 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00053.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00053.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Finish adding environment variables.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00054.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00054.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1485,19 +1485,19 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701082908"></script>
-    <script src="/js/jquery.sticky.js?1701082908"></script>
-    <script src="/js/featherlight.min.js?1701082908"></script>
-    <script src="/js/highlight.pack.js?1701082908"></script>
+    <script src="/js/clipboard.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733805990"></script>
+    <script src="/js/jquery.sticky.js?1733805990"></script>
+    <script src="/js/featherlight.min.js?1733805990"></script>
+    <script src="/js/highlight.pack.js?1733805990"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701082908"></script>
-    <script src="/js/learn.js?1701082908"></script>
-    <script src="/js/hugo-learn.js?1701082908"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733805990"></script>
+    <script src="/js/learn.js?1733805990"></script>
+    <script src="/js/hugo-learn.js?1733805990"></script>
 
-    <link href="/mermaid/mermaid.css?1701082908" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701082908"></script>
+    <link href="/mermaid/mermaid.css?1733805990" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733805990"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

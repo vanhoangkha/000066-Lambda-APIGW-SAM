@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Creating Chroma Key Lambda function :: SERVERLESS WITH LAMBDA, API GATEWAY AND SAM</title>
 
     
-    <link href="/css/nucleus.css?1701082908" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701082908" rel="stylesheet">
-    <link href="/css/hybrid.css?1701082908" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701082908" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701082908" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701082908" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701082908" rel="stylesheet">
-    <link href="/css/theme.css?1701082908" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701082908" rel="stylesheet">
+    <link href="/css/nucleus.css?1733805990" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733805990" rel="stylesheet">
+    <link href="/css/hybrid.css?1733805990" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733805990" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733805990" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733805990" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733805990" rel="stylesheet">
+    <link href="/css/theme.css?1733805990" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733805990" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701082908" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733805990" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701082908"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733805990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701082908"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701082908"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733805990"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733805990"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701082908"></script>
+<script type="text/javascript" src="/js/search.js?1733805990"></script>
 
     
   </div>
@@ -577,7 +577,7 @@
   
     
     <li data-nav-id="/5-on-ridesphotoprocessing/5.1-backend/5.1.1-chromakeylambda/" title="Creating Chroma Key Lambda function" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -813,7 +813,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -937,18 +937,18 @@ More information about the services featured in this section:</li>
 <pre tabindex="0"><code>mkdir ~/environment/lambda-layer
 cd ~/environment/lambda-layer
 wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00063.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00063.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Upload the zip package to your S3 deployment bucket:</li>
 </ol>
 <pre tabindex="0"><code>aws s3 cp opencv-python-37.zip s3://$s3_deploy_bucket
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00064.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00064.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Create Lambda layer:</li>
 </ol>
 <pre tabindex="0"><code>aws lambda publish-layer-version --layer-name python-opencv-37 --description &#34;OpenCV for Python 3.7&#34; --content S3Bucket=$s3_deploy_bucket,S3Key=opencv-python-37.zip --compatible-runtimes python3. 7
 </code></pre><p>After a few seconds, the JSON response in the terminal confirms <strong>LayerArn</strong> and <strong>Version</strong> of the new layer.</p>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00065.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00065.png?featherlight=false&width=90pc"></p>
 <h4 id="create-a-chromakey-lambda-function">Create a Chromakey Lambda function</h4>
 <ol>
 <li>
@@ -958,7 +958,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00066.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00066.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>In the <strong>Create function</strong> page</p>
@@ -971,7 +971,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00067.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00067.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>
 <p>In the <strong>Change default execution role</strong> section.</p>
@@ -982,14 +982,14 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00068.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00068.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>In the overview page of <strong>Lambda function</strong> just created</li>
 </ol>
 <ul>
 <li>Select <strong>+ Add Trigger</strong>.</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00069.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00069.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>
 <p>In <strong>Trigger configuration</strong></p>
@@ -1002,7 +1002,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00070.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00070.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>
 <p>Back to the Lambda function interface,</p>
@@ -1013,7 +1013,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00071.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00071.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>
 <p>In the <strong>Add layer</strong> page</p>
@@ -1025,14 +1025,14 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00072.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00072.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Back to <strong>Lambda function</strong></li>
 </ol>
 <ul>
 <li>Select <strong>Code</strong> tab.</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00073.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00073.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Return to <strong>Cloud9</strong></li>
 </ol>
@@ -1040,7 +1040,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <li>Select <strong>3-photos/1-chromakey/app.py</strong></li>
 <li>Copy the code of <strong>app.py</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00074.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00074.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Paste the code of <strong>app.py</strong> into <strong>lambda_function.py</strong></li>
 </ol>
@@ -1048,7 +1048,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <li>Save</li>
 <li>Select <strong>Deploy</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00075.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00075.png?featherlight=false&width=90pc"></p>
 <h4 id="add-environment-variables">Add environment variables</h4>
 <p>This function uses three environment variables:</p>
 <ul>
@@ -1067,7 +1067,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00076.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00076.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>Return to <strong>Cloud9 Terminal</strong> interface</p>
@@ -1077,7 +1077,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </li>
 </ol>
 <pre tabindex="0"><code>aws s3 ls | grep theme-park-backend-processingbucket
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00077.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00077.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>Enter three environment variables with three values, as follows:</p>
@@ -1089,7 +1089,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00078.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00078.png?featherlight=false&width=90pc"></p>
 <h4 id="change-settings-for-lambda-function">Change settings for Lambda Function</h4>
 <ol>
 <li>In the browser tab <strong>theme-park-photos-chromakey</strong> Lambda function is open</li>
@@ -1099,7 +1099,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <li>Select <strong>General configuration</strong></li>
 <li>Select <strong>Edit</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00079.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00079.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>In the <strong>General configuration</strong> interface</p>
@@ -1110,11 +1110,11 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00080.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00080.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Finish changing settings <strong>Lambda function</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00081.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00081.png?featherlight=false&width=90pc"></p>
 <p>The <strong>chroma key</strong> process uses memory-intensive libraries to complete the graphics processing. By allocating maximum memory, this function will complete the processing faster.</p>
 <h4 id="test-function">Test function</h4>
 <p>Now you will test the function using a test image containing a photo of a person on a green background. You would manually copy this image into <strong>Upload bucket</strong> and see the result in <strong>Processing bucket</strong>.</p>
@@ -1126,7 +1126,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <p>Navigate to the <strong>theme-park-backend\3-photos\green-screen-test.png</strong> file and open it. You can view a photo of a person with a green screen. Here is a local test image.</p>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00082.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00082.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>In terminal , enter the following command to change directory:</li>
 </ol>
@@ -1139,7 +1139,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <li>Copy the local test image into your upload bucket, replacing the <strong>youruploadbucket</strong> bucket parameter with your bucket name from step 4:</li>
 </ol>
 <pre tabindex="0"><code>aws s3 cp ./green-screen-test.png s3://youruploadbucketname
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00083.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00083.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>
 <p>In another browser tab, open the AWS Console S3 console.</p>
@@ -1151,11 +1151,11 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00084.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00084.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>You will see the original modified green screen image showing the person with the green background now removed. The Lambda function was called when the image was uploaded to the S3 bucket. The function ran a chromakey process using a library imported with Lambda Layer to get rid of the green screen and then wrote the resulting image to another S3 bucket.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00085.png?featherlight=false&amp;width=30pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00085.png?featherlight=false&width=30pc"></p>
 
 
 
@@ -1570,19 +1570,19 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701082908"></script>
-    <script src="/js/jquery.sticky.js?1701082908"></script>
-    <script src="/js/featherlight.min.js?1701082908"></script>
-    <script src="/js/highlight.pack.js?1701082908"></script>
+    <script src="/js/clipboard.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733805990"></script>
+    <script src="/js/jquery.sticky.js?1733805990"></script>
+    <script src="/js/featherlight.min.js?1733805990"></script>
+    <script src="/js/highlight.pack.js?1733805990"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701082908"></script>
-    <script src="/js/learn.js?1701082908"></script>
-    <script src="/js/hugo-learn.js?1701082908"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733805990"></script>
+    <script src="/js/learn.js?1733805990"></script>
+    <script src="/js/hugo-learn.js?1733805990"></script>
 
-    <link href="/mermaid/mermaid.css?1701082908" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701082908"></script>
+    <link href="/mermaid/mermaid.css?1733805990" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733805990"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

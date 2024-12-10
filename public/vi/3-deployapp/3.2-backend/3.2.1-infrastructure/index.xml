@@ -4,6 +4,8 @@
     <title>Triển khai hạ tầng on SERVERLESS VỚI LAMBDA, API GATEWAY VÀ SAM</title>
     <link>/vi/3-deployapp/3.2-backend/3.2.1-infrastructure/</link>
     <description>Recent content in Triển khai hạ tầng on SERVERLESS VỚI LAMBDA, API GATEWAY VÀ SAM</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/3-deployapp/3.2-backend/3.2.1-infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <atom:link href="/vi/3-deployapp/3.2-backend/3.2.1-infrastructure/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Frontend Deployment :: SERVERLESS WITH LAMBDA, API GATEWAY AND SAM</title>
 
     
-    <link href="/css/nucleus.css?1701082908" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701082908" rel="stylesheet">
-    <link href="/css/hybrid.css?1701082908" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701082908" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701082908" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701082908" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701082908" rel="stylesheet">
-    <link href="/css/theme.css?1701082908" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701082908" rel="stylesheet">
+    <link href="/css/nucleus.css?1733805990" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733805990" rel="stylesheet">
+    <link href="/css/hybrid.css?1733805990" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733805990" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733805990" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733805990" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733805990" rel="stylesheet">
+    <link href="/css/theme.css?1733805990" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733805990" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701082908" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733805990" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701082908"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733805990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701082908"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701082908"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733805990"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733805990"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701082908"></script>
+<script type="text/javascript" src="/js/search.js?1733805990"></script>
 
     
   </div>
@@ -480,7 +480,7 @@
   
     
     <li data-nav-id="/4-realtime-ridewaittimes/4.2-frontend/" title="Frontend Deployment" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -813,7 +813,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -921,7 +921,7 @@
 <li>Run this command to display <strong>Id IdentityPool</strong>:</li>
 </ol>
 <pre tabindex="0"><code>aws cognito-identity list-identity-pools --max-results 10
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00055.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00055.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Run command to display <strong>IoT endpoint hostname</strong></li>
 </ol>
@@ -930,7 +930,7 @@
 <li>Run command to display AWS REGION</li>
 </ul>
 <pre tabindex="0"><code>echo $AWS_REGION
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00056.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00056.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>In Terminal Cloud9, in the left directory panel, navigate to <strong>theme-park-frontend/src</strong>.</li>
 </ol>
@@ -946,7 +946,7 @@
 </li>
 <li>Use <strong>Ctrl + S</strong> to save the file.</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00057.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00057.png?featherlight=false&width=90pc"></p>
 <h4 id="push-codecommit-and-deploy-via-amplify">Push CodeCommit and deploy via Amplify.</h4>
 <ol>
 <li>In the Cloud9 Terminal, change to the front-end directory with the following command:</li>
@@ -957,22 +957,22 @@
 </ol>
 <pre tabindex="0"><code>git commit -am &#34;Module 2&#34;
 git push
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00058.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00058.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>After completing the commit, go to <a href="https://console.aws.amazon.com/amplify/">Amplify Console</a>. Make sure <strong>Region</strong> is correct.</li>
 </ol>
 <ul>
 <li>In <strong>All apps</strong> page, Select <strong>theme-park-frontend</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00059.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00059.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>You should see a new build automatically started as a result of the new commit in the base code repo. This build will take a few minutes.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00060.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00060.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Open the published app URL in the browser.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00061.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00061.png?featherlight=false&width=90pc"></p>
 <p>You can now see rides and attractions on a theme park map that shows real-time wait times and updates every minute.</p>
 
 
@@ -1390,19 +1390,19 @@ git push
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701082908"></script>
-    <script src="/js/jquery.sticky.js?1701082908"></script>
-    <script src="/js/featherlight.min.js?1701082908"></script>
-    <script src="/js/highlight.pack.js?1701082908"></script>
+    <script src="/js/clipboard.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733805990"></script>
+    <script src="/js/jquery.sticky.js?1733805990"></script>
+    <script src="/js/featherlight.min.js?1733805990"></script>
+    <script src="/js/highlight.pack.js?1733805990"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701082908"></script>
-    <script src="/js/learn.js?1701082908"></script>
-    <script src="/js/hugo-learn.js?1701082908"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733805990"></script>
+    <script src="/js/learn.js?1733805990"></script>
+    <script src="/js/hugo-learn.js?1733805990"></script>
 
-    <link href="/mermaid/mermaid.css?1701082908" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701082908"></script>
+    <link href="/mermaid/mermaid.css?1733805990" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733805990"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

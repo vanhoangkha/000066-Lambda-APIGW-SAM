@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Chroma Key Lambda function :: SERVERLESS VỚI LAMBDA, API GATEWAY VÀ SAM</title>
 
     
-    <link href="/css/nucleus.css?1701082909" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701082909" rel="stylesheet">
-    <link href="/css/hybrid.css?1701082909" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701082909" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701082909" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701082909" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701082909" rel="stylesheet">
-    <link href="/css/theme.css?1701082909" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701082909" rel="stylesheet">
+    <link href="/css/nucleus.css?1733805990" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733805990" rel="stylesheet">
+    <link href="/css/hybrid.css?1733805990" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733805990" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733805990" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733805990" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733805990" rel="stylesheet">
+    <link href="/css/theme.css?1733805990" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733805990" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701082909" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733805990" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701082909"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733805990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701082909"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701082909"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733805990"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733805990"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701082909"></script>
+<script type="text/javascript" src="/js/search.js?1733805990"></script>
 
     
   </div>
@@ -577,7 +577,7 @@
   
     
     <li data-nav-id="/vi/5-on-ridesphotoprocessing/5.1-backend/5.1.1-chromakeylambda/" title="Tạo Chroma Key Lambda function" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -813,7 +813,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -937,18 +937,18 @@ Thông tin thêm về các dịch vụ được giới thiệu trong phần này
 <pre tabindex="0"><code>mkdir ~/environment/lambda-layer
 cd ~/environment/lambda-layer
 wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00063.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00063.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Tải gói mã nén lên nhóm triển khai S3 của bạn:</li>
 </ol>
 <pre tabindex="0"><code>aws s3 cp opencv-python-37.zip s3://$s3_deploy_bucket
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00064.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00064.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Tạo lớp Lambda:</li>
 </ol>
 <pre tabindex="0"><code>aws lambda publish-layer-version --layer-name python-opencv-37 --description &#34;OpenCV for Python 3.7&#34; --content S3Bucket=$s3_deploy_bucket,S3Key=opencv-python-37.zip --compatible-runtimes python3.7
 </code></pre><p>Sau một vài giây, phản hồi JSON trong terminal  xác nhận <strong>LayerArn</strong> và <strong>Version</strong> của lớp mới.</p>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00065.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00065.png?featherlight=false&width=90pc"></p>
 <h4 id="tạo-hàm-chromakey-lambda">Tạo hàm Chromakey Lambda</h4>
 <ol>
 <li>
@@ -958,7 +958,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00066.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00066.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>Trong trang <strong>Create function</strong></p>
@@ -971,7 +971,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00067.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00067.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>
 <p>Trong phần <strong>Change default execution role</strong>.</p>
@@ -982,14 +982,14 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00068.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00068.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Trong trang tổng quan về <strong>Lambda function</strong> vừa tạo</li>
 </ol>
 <ul>
 <li>Chọn <strong>+ Add Trigger</strong>.</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00069.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00069.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>
 <p>Trong <strong>Trigger configuration</strong></p>
@@ -1002,7 +1002,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00070.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00070.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>
 <p>Trở lại giao diện Lambda function,</p>
@@ -1013,7 +1013,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00071.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00071.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>
 <p>Trong trang <strong>Add layer</strong></p>
@@ -1025,14 +1025,14 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00072.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00072.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Quay lại <strong>Lambda function</strong></li>
 </ol>
 <ul>
 <li>Chọn <strong>Code</strong> tab.</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00073.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00073.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Quay trở lại <strong>Cloud9</strong></li>
 </ol>
@@ -1040,7 +1040,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <li>Chọn <strong>3-photos/1-chromakey/app.py</strong></li>
 <li>Sao chép code của <strong>app.py</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00074.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00074.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Dán code của <strong>app.py</strong> vào <strong>lambda_function.py</strong></li>
 </ol>
@@ -1048,7 +1048,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <li>Lưu lại</li>
 <li>Chọn <strong>Deploy</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00075.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00075.png?featherlight=false&width=90pc"></p>
 <h4 id="thêm-các-biến-môi-trường">Thêm các biến môi trường</h4>
 <p>Hàm này sử dụng ba biến môi trường:</p>
 <ul>
@@ -1067,7 +1067,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00076.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00076.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>Quay lại giao diện <strong>Cloud9  Terminal</strong></p>
@@ -1077,7 +1077,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </li>
 </ol>
 <pre tabindex="0"><code>aws s3 ls | grep theme-park-backend-processingbucket
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00077.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00077.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>Nhập ba biến môi trường với ba giá trị, như sau:</p>
@@ -1089,7 +1089,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00078.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00078.png?featherlight=false&width=90pc"></p>
 <h4 id="thay-đổi-cài-đặt-cho-lambda-function">Thay đổi cài đặt cho Lambda Function</h4>
 <ol>
 <li>Trong tab trình duyệt có <strong>theme-park-photos-chromakey</strong> Lambda  function đang mở</li>
@@ -1099,7 +1099,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <li>Chọn <strong>General configuration</strong></li>
 <li>Chọn <strong>Edit</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00079.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00079.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>Trong giao diện <strong>General configuration</strong></p>
@@ -1110,11 +1110,11 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00080.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00080.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Hoàn thành thay đổi cài đặt <strong>Lambda function</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00081.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00081.png?featherlight=false&width=90pc"></p>
 <p>Quá trình <strong>chroma key</strong> sử dụng các thư viện sử dụng nhiều bộ nhớ để hoàn tất quá trình xử lý đồ họa. Bằng cách phân bổ bộ nhớ tối đa, function này sẽ hoàn thành quá trình xử lý nhanh hơn.</p>
 <h4 id="kiểm-tra-function">Kiểm tra function</h4>
 <p>Bây giờ bạn sẽ kiểm tra function bằng cách sử dụng hình ảnh thử nghiệm có chứa ảnh của một người trên nền màu xanh lá cây. Bạn sẽ sao chép thủ công hình ảnh này vào <strong>Upload bucket</strong> và xem kết quả trong <strong>Processing bucket</strong>.</p>
@@ -1126,7 +1126,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <p>Điều hướng đến tệp <strong>theme-park-backend\3-photos\green-screen-test.png</strong> và mở. Bạn có thể xem ảnh của một người với màn hình màu xanh lá cây. Đây là hình ảnh thử nghiệm  local  .</p>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00082.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00082.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Trong  terminal , nhập lệnh sau để thay đổi thư mục:</li>
 </ol>
@@ -1139,7 +1139,7 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 <li>Sao chép hình ảnh thử nghiệm  local   vào upload bucket của bạn, thay thế <strong>youruploadbucket</strong> thông số nhóm bằng tên nhóm của bạn từ bước 4:</li>
 </ol>
 <pre tabindex="0"><code>aws s3 cp ./green-screen-test.png s3://youruploadbucketname
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00083.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00083.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>
 <p>Trong một tab trình duyệt khác, hãy mở bảng điều khiển S3 của AWS Console.</p>
@@ -1151,11 +1151,11 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00084.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00084.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Bạn sẽ thấy hình ảnh màn hình màu xanh lá cây ban đầu đã được sửa đổi hiển thị người có nền màu xanh lá cây hiện đã bị loại bỏ. Hàm Lambda đã được gọi khi ảnh được tải lên S3 bucket. Hàm đã chạy một quá trình chromakey bằng cách sử dụng một thư viện được nhập bằng Lambda Layer để loại bỏ màn hình màu xanh lục và sau đó ghi hình ảnh kết quả vào một S3 bucket khác.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00085.png?featherlight=false&amp;width=30pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00085.png?featherlight=false&width=30pc"></p>
 
 
 
@@ -1570,19 +1570,19 @@ wget https://innovator-island.s3-us-west-2.amazonaws.com/opencv-python-37.zip
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701082909"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701082909"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701082909"></script>
-    <script src="/js/jquery.sticky.js?1701082909"></script>
-    <script src="/js/featherlight.min.js?1701082909"></script>
-    <script src="/js/highlight.pack.js?1701082909"></script>
+    <script src="/js/clipboard.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733805990"></script>
+    <script src="/js/jquery.sticky.js?1733805990"></script>
+    <script src="/js/featherlight.min.js?1733805990"></script>
+    <script src="/js/highlight.pack.js?1733805990"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701082909"></script>
-    <script src="/js/learn.js?1701082909"></script>
-    <script src="/js/hugo-learn.js?1701082909"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733805990"></script>
+    <script src="/js/learn.js?1733805990"></script>
+    <script src="/js/hugo-learn.js?1733805990"></script>
 
-    <link href="/mermaid/mermaid.css?1701082909" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701082909"></script>
+    <link href="/mermaid/mermaid.css?1733805990" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733805990"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

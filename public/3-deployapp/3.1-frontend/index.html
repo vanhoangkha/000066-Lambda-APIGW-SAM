@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Frontend Deployment :: SERVERLESS WITH LAMBDA, API GATEWAY AND SAM</title>
 
     
-    <link href="/css/nucleus.css?1701082908" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701082908" rel="stylesheet">
-    <link href="/css/hybrid.css?1701082908" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701082908" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701082908" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701082908" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701082908" rel="stylesheet">
-    <link href="/css/theme.css?1701082908" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701082908" rel="stylesheet">
+    <link href="/css/nucleus.css?1733805990" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733805990" rel="stylesheet">
+    <link href="/css/hybrid.css?1733805990" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733805990" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733805990" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733805990" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733805990" rel="stylesheet">
+    <link href="/css/theme.css?1733805990" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733805990" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701082908" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733805990" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701082908"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733805990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701082908"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701082908"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733805990"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733805990"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701082908"></script>
+<script type="text/javascript" src="/js/search.js?1733805990"></script>
 
     
   </div>
@@ -234,7 +234,7 @@
   
     
     <li data-nav-id="/3-deployapp/3.1-frontend/" title="Frontend Deployment" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -813,7 +813,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -924,33 +924,33 @@ git config --global credential.UseHttpPath true
 <li>To save login information.</li>
 <li>Use for different repositories should configure the credentials to use the full repository path.</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00013.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00013.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Create a directory to contain <strong>source code front-end</strong>.</li>
 </ol>
 <pre tabindex="0"><code>mkdir ~/environment/sampleapp/theme-park-frontend
 cd ~/environment/sampleapp/theme-park-frontend
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00014.png?featherlight=false&amp;width=90pc" alt="Cloud9">
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00014.png?featherlight=false&width=90pc">
 4. Run the commands below to download the source code from <strong>GitHub</strong> and copy it to a subdirectory.</p>
 <ul>
 <li>Then, extract with <strong>unzip</strong></li>
 </ul>
 <pre tabindex="0"><code>wget --no-check-certificate https://github.com/First-Cloud-Journey/000066-serverlesssample/raw/8b8f82165b55afcd4e4ccb2066511d1ab425b646/theme-park-frontend-202110.zip
 unzip theme-park-frontend-202110.zip
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00015.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00015.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Run the following command to configure <strong>local Git repository and commit</strong>.</li>
 </ol>
 <pre tabindex="0"><code>git init -b main
 git add .
 git commit -am &#34;First commit&#34;
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00016.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00016.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Push the code to the <strong>CodeCommit repository</strong> we created for the Frontend part.</li>
 </ol>
 <pre tabindex="0"><code>AWS_REGION=$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone | sed &#39;s/\(.*\)[a-z]/\1/&#39;)
 git push --set-upstream https://git-codecommit.$AWS_REGION.amazonaws.com/v1/repos/theme-park-frontend main
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00017.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00017.png?featherlight=false&width=90pc"></p>
 <h4 id="deploy-with-amplify">Deploy with Amplify</h4>
 <ol>
 <li>
@@ -963,7 +963,7 @@ git push --set-upstream https://git-codecommit.$AWS_REGION.amazonaws.com/v1/repo
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00018.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00018.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Click <strong>AWS CodeCommit</strong>.
 <ul>
@@ -971,7 +971,7 @@ git push --set-upstream https://git-codecommit.$AWS_REGION.amazonaws.com/v1/repo
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00019.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00019.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>At the <strong>Add repository branch</strong> page.
 <ul>
@@ -981,23 +981,23 @@ git push --set-upstream https://git-codecommit.$AWS_REGION.amazonaws.com/v1/repo
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00020.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00020.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>On the <strong>Configure build settings</strong> page, keep the default options and click <strong>Next</strong>.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00021.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00021.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>On the <strong>Review</strong> page, check the configuration again and click <strong>Save and deploy</strong>.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00022.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00022.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Once the build process has completed the <strong>Verify</strong> stage, choose to open the link provided for your app in a new tab.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00023.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00023.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>You will see a blank park map with a navigation bar. We will add those features next.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00024.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00024.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Copy <strong>web app&rsquo;s published URL</strong> into your notes file. You will need this information in the next steps.</li>
 </ol>
@@ -1414,19 +1414,19 @@ git push --set-upstream https://git-codecommit.$AWS_REGION.amazonaws.com/v1/repo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701082908"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701082908"></script>
-    <script src="/js/jquery.sticky.js?1701082908"></script>
-    <script src="/js/featherlight.min.js?1701082908"></script>
-    <script src="/js/highlight.pack.js?1701082908"></script>
+    <script src="/js/clipboard.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733805990"></script>
+    <script src="/js/jquery.sticky.js?1733805990"></script>
+    <script src="/js/featherlight.min.js?1733805990"></script>
+    <script src="/js/highlight.pack.js?1733805990"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701082908"></script>
-    <script src="/js/learn.js?1701082908"></script>
-    <script src="/js/hugo-learn.js?1701082908"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733805990"></script>
+    <script src="/js/learn.js?1733805990"></script>
+    <script src="/js/hugo-learn.js?1733805990"></script>
 
-    <link href="/mermaid/mermaid.css?1701082908" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701082908"></script>
+    <link href="/mermaid/mermaid.css?1733805990" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733805990"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

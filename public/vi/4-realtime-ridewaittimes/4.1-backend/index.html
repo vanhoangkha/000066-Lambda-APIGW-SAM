@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Triển khai Backend :: SERVERLESS VỚI LAMBDA, API GATEWAY VÀ SAM</title>
 
     
-    <link href="/css/nucleus.css?1701082909" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701082909" rel="stylesheet">
-    <link href="/css/hybrid.css?1701082909" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701082909" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701082909" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701082909" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701082909" rel="stylesheet">
-    <link href="/css/theme.css?1701082909" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701082909" rel="stylesheet">
+    <link href="/css/nucleus.css?1733805990" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733805990" rel="stylesheet">
+    <link href="/css/hybrid.css?1733805990" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733805990" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733805990" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733805990" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733805990" rel="stylesheet">
+    <link href="/css/theme.css?1733805990" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733805990" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701082909" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733805990" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701082909"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733805990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701082909"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701082909"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733805990"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733805990"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701082909"></script>
+<script type="text/javascript" src="/js/search.js?1733805990"></script>
 
     
   </div>
@@ -452,7 +452,7 @@
   
     
     <li data-nav-id="/vi/4-realtime-ridewaittimes/4.1-backend/" title="Triển khai Backend" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -813,7 +813,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -929,7 +929,7 @@
 </li>
 </ul>
 <h4 id="the-real-time-serverless-backend">The Real-Time Serverless Backend</h4>
-<p><img src="/images/4-ridewaittimes/4.1-backend/module3-overview.png?featherlight=false&amp;width=60pc" alt="The Real-Time Serverless Backend"></p>
+<p><img alt="The Real-Time Serverless Backend" src="/images/4-ridewaittimes/4.1-backend/module3-overview.png?featherlight=false&width=60pc"></p>
 <ul>
 <li>Bộ điều khiển luồng &amp; lưu lượng đã được triển khai và publish các bản cập nhật cho  SNS topic .</li>
 <li>Hàm Lambda nhận thông báo mới dưới dạng  event payload  và phân tích cú pháp thông báo. Sau đó, nó lưu trữ thông báo trong bảng DynamoDB và chuyển tiếp đến ioT topic.</li>
@@ -947,7 +947,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 <div class="notices info" ><p>Các biến môi trường không được lưu trữ trong terminal . Bất kỳ lúc nào bạn đóng Cloud9 hoặc mở một terminal  mới, bạn sẽ cần chạy lại các lệnh này để đặt các biến môi trường. Phần này được cung cấp trong mỗi mô-đun.</p>
 </div>
 
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00042.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00042.png?featherlight=false&width=90pc"></p>
 <h4 id="tạo-hàm-lambda">Tạo hàm Lambda</h4>
 <ol start="2">
 <li>
@@ -958,7 +958,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00043.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00043.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>
 <p>Trong trang <strong>Create function</strong></p>
@@ -971,7 +971,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00044.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00044.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>Đối với <strong>Change default execution</strong></p>
@@ -982,11 +982,11 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00045.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00045.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Hoàn thành tạo function. Tiếp theo, chúng ta chọn <strong>+ Add trigger</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00046.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00046.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>
 <p>Thực hiện <strong>Trigger configuration</strong></p>
@@ -997,14 +997,14 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00047.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00047.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Sau khi <strong>Trigger configuration</strong> thành công.</li>
 </ol>
 <ul>
 <li>Chọn <strong>Code</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00048.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00048.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>
 <p>Quay trở lại <strong>Cloud9 tab</strong>.</p>
@@ -1016,7 +1016,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00049.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00049.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Quay trở lại <strong>Lambda console</strong>.</li>
 </ol>
@@ -1024,7 +1024,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 <li>Chọn <strong>index.js</strong>.</li>
 <li>Dán code của <strong>app.js</strong> vào.</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00050.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00050.png?featherlight=false&width=90pc"></p>
 <p>Mã hàm Lambda này đọc thông báo mới nhất từ ​​chủ đề SNS, ghi nó vào bảng DynamoDB, sau đó đẩy thông báo đến ứng dụng front-end thông qua ioT topic.</p>
 <h4 id="thêm-các-biến-môi-trường">Thêm các biến môi trường</h4>
 <p>Hàm này sử dụng ba biến môi trường:</p>
@@ -1046,7 +1046,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 <li>Tiếp theo, nhập lệnh sau để truy xuất giá trị cho <strong>DDB_TABLE_NAME</strong>:</li>
 </ol>
 <pre tabindex="0"><code>aws dynamodb list-tables | grep backend
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00051.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00051.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>Quay lại tab trình duyệt với <strong>theme-park-ridetimes Lambda function</strong> đang mở.</p>
@@ -1057,7 +1057,7 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00052.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00052.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>
 <p>Chọn <strong>Add environment variable</strong> ba lần để nhập ba biến môi trường sau:</p>
@@ -1069,11 +1069,11 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00053.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00053.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Hoàn thành thêm biến môi trường.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00054.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00054.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1487,19 +1487,19 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701082909"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701082909"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701082909"></script>
-    <script src="/js/jquery.sticky.js?1701082909"></script>
-    <script src="/js/featherlight.min.js?1701082909"></script>
-    <script src="/js/highlight.pack.js?1701082909"></script>
+    <script src="/js/clipboard.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733805990"></script>
+    <script src="/js/jquery.sticky.js?1733805990"></script>
+    <script src="/js/featherlight.min.js?1733805990"></script>
+    <script src="/js/highlight.pack.js?1733805990"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701082909"></script>
-    <script src="/js/learn.js?1701082909"></script>
-    <script src="/js/hugo-learn.js?1701082909"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733805990"></script>
+    <script src="/js/learn.js?1733805990"></script>
+    <script src="/js/hugo-learn.js?1733805990"></script>
 
-    <link href="/mermaid/mermaid.css?1701082909" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701082909"></script>
+    <link href="/mermaid/mermaid.css?1733805990" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733805990"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

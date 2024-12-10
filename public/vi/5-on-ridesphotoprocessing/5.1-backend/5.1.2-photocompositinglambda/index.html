@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Photo-Compositing Lambda function :: SERVERLESS VỚI LAMBDA, API GATEWAY VÀ SAM</title>
 
     
-    <link href="/css/nucleus.css?1701082909" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701082909" rel="stylesheet">
-    <link href="/css/hybrid.css?1701082909" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701082909" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701082909" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701082909" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701082909" rel="stylesheet">
-    <link href="/css/theme.css?1701082909" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701082909" rel="stylesheet">
+    <link href="/css/nucleus.css?1733805990" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733805990" rel="stylesheet">
+    <link href="/css/hybrid.css?1733805990" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733805990" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733805990" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733805990" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733805990" rel="stylesheet">
+    <link href="/css/theme.css?1733805990" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733805990" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701082909" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733805990" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701082909"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733805990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701082909"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701082909"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733805990"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733805990"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701082909"></script>
+<script type="text/javascript" src="/js/search.js?1733805990"></script>
 
     
   </div>
@@ -605,7 +605,7 @@
   
     
     <li data-nav-id="/vi/5-on-ridesphotoprocessing/5.1-backend/5.1.2-photocompositinglambda/" title="Tạo Photo-Compositing Lambda function" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -813,7 +813,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -937,7 +937,7 @@
 <p>Trong bảng điều khiển trình khám phá tệp Cloud9, hãy điều hướng đến và mở <strong>theme-park-backend\3-photos\2-compositing\template.yaml</strong> để xem lại nội dung của nó.</p>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00086.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00086.png?featherlight=false&width=90pc"></p>
 <p>SAM sẽ đọc tệp này và chuyển đổi YAML này thành cơ sở hạ tầng. Một số phần quan trọng  bao gồm:</p>
 <ul>
 <li><strong>Parameters</strong> : hàm cần biết tên của final bucket, vì vậy bạn có thể cung cấp thông số này làm tham số cho mẫu.</li>
@@ -960,7 +960,7 @@
 <li>Bạn có thể thấy tên của final S3 bucket  bằng cách sử dụng lệnh sau đây đã được lưu trữ dưới dạng một biến môi trường <strong>$FINAL_BUCKET</strong>. <strong>SAM</strong> sẽ được cấu hình để sử dụng tên s3 bucket này để đặt biến môi trường trong hàm Lambda.</li>
 </ol>
 <pre tabindex="0"><code>aws s3 ls | grep finalbucket
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00087.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00087.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Trong  terminal , thực hiện các lệnh SAM CLI sau đây sẽ tạo ứng dụng SAM, đóng gói mã với cùng một nhóm triển khai SAM S3 đã được sử dụng trước đó và sau đó triển khai ứng dụng chỉ định tên Final bucket S3 cho hàm Lambda để sử dụng:</li>
 </ol>
@@ -969,25 +969,25 @@
 sam package --output-template-file packaged.yaml --s3-bucket $s3_deploy_bucket
 
 sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabilities CAPABILITY_IAM --parameter-overrides &#34;FinalBucketName&#34;=$FINAL_BUCKET
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00088.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00088.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Quá trình này sẽ mất vài phút để triển khai - hãy đợi thông báo xác nhận trong bảng điều khiển trước khi tiếp tục.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00089.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00089.png?featherlight=false&width=90pc"></p>
 <h4 id="thêm-s3-trigger">Thêm S3 trigger</h4>
 <p>Bây giờ bạn đã tạo hàm Lambda, bạn cần phải cấu hình cách nó được gọi. Hàm tổng hợp này cần thực thi khi một  object  mới được đưa vào bộ xử lý . Trong phần này, bạn sẽ tạo trình kích hoạt này.</p>
 <ol>
 <li>Đi tới bảng điều khiển Lambda - từ Bảng điều khiển quản lý AWS, chọn <strong>Service</strong> rồi chọn <strong>Lambda</strong>. Đảm bảo rằng region của bạn là chính xác.</li>
 <li>Chọn function có tên <strong>theme-park-photos-CompositeFunction-XXXXXXXXX</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00090.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00090.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Trong giao diện Lambda function</li>
 </ol>
 <ul>
 <li>Chọn <strong>+ Add Trigger</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00091.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00091.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Trong <strong>Trigger configuration</strong></li>
 </ol>
@@ -998,11 +998,11 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabi
 <li>Kiểm tra <strong>Recursive invocation acknowledgement</strong></li>
 <li>Chọn <strong>Add</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00092.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00092.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Hoàn thành <strong>Add trigger S3</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00093.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00093.png?featherlight=false&width=90pc"></p>
 <h4 id="kiểm-tra-function">Kiểm tra function</h4>
 <p>Bây giờ bạn sẽ kiểm tra function bằng cách sử dụng hình ảnh thử nghiệm có chứa ảnh của một người trên nền màu xanh lá cây. Bạn sẽ sao chép hình ảnh này vào uploadbucket và xem kết quả cuối cùng trong finalbucket .</p>
 <ol>
@@ -1018,12 +1018,12 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabi
 <li>Sao chép hình ảnh thử nghiệm  local   vào upload bucket của bạn. Lệnh sẽ sử dụng biến môi trường đã tạo trước $UPLOAD_BUCKETđó được đặt thành tên nhóm này:</li>
 </ol>
 <pre tabindex="0"><code>aws s3 cp ./green-screen-test.png s3://$UPLOAD_BUCKET
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00094.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00094.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Trong một tab khác, mở bảng điều khiển S3.</li>
 <li>Chọn <strong>theme-park-backend-finalbucket</strong>.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00095.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00095.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>
 <p>Kiểm tra <strong>green-screen-test.jpg</strong>,</p>
@@ -1033,11 +1033,11 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabi
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00096.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00096.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Bạn sẽ thấy ảnh của một người đã bị xóa nền xanh và bây giờ được ghép với nền công viên giải trí và đồ họa logo.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00097.png?featherlight=false&amp;width=30pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00097.png?featherlight=false&width=30pc"></p>
 
 
 
@@ -1455,19 +1455,19 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-photos --capabi
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701082909"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701082909"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701082909"></script>
-    <script src="/js/jquery.sticky.js?1701082909"></script>
-    <script src="/js/featherlight.min.js?1701082909"></script>
-    <script src="/js/highlight.pack.js?1701082909"></script>
+    <script src="/js/clipboard.min.js?1733805991"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733805991"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733805991"></script>
+    <script src="/js/jquery.sticky.js?1733805991"></script>
+    <script src="/js/featherlight.min.js?1733805991"></script>
+    <script src="/js/highlight.pack.js?1733805991"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701082909"></script>
-    <script src="/js/learn.js?1701082909"></script>
-    <script src="/js/hugo-learn.js?1701082909"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733805991"></script>
+    <script src="/js/learn.js?1733805991"></script>
+    <script src="/js/hugo-learn.js?1733805991"></script>
 
-    <link href="/mermaid/mermaid.css?1701082909" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701082909"></script>
+    <link href="/mermaid/mermaid.css?1733805991" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733805991"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

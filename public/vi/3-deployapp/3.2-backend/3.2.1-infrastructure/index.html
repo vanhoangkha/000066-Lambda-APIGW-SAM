@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Triển khai hạ tầng :: SERVERLESS VỚI LAMBDA, API GATEWAY VÀ SAM</title>
 
     
-    <link href="/css/nucleus.css?1701082908" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701082908" rel="stylesheet">
-    <link href="/css/hybrid.css?1701082908" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701082908" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701082908" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701082908" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701082908" rel="stylesheet">
-    <link href="/css/theme.css?1701082908" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701082908" rel="stylesheet">
+    <link href="/css/nucleus.css?1733805990" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733805990" rel="stylesheet">
+    <link href="/css/hybrid.css?1733805990" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733805990" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733805990" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733805990" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733805990" rel="stylesheet">
+    <link href="/css/theme.css?1733805990" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733805990" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701082908" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733805990" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701082908"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733805990"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701082908"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701082908"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733805990"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733805990"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701082908"></script>
+<script type="text/javascript" src="/js/search.js?1733805990"></script>
 
     
   </div>
@@ -293,7 +293,7 @@
   
     
     <li data-nav-id="/vi/3-deployapp/3.2-backend/3.2.1-infrastructure/" title="Triển khai hạ tầng" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -813,7 +813,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -927,14 +927,14 @@ s3_deploy_bucket=&#34;theme-park-sam-deploys-${accountId}&#34;
 echo $s3_deploy_bucket
 
 aws s3 mb s3://$s3_deploy_bucket
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00025.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00025.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Chạy các câu lệnh dưới đây để tiến hành download source sử dụng cho backend.</li>
 </ol>
 <pre tabindex="0"><code>cd ~/environment/sampleapp
 wget --no-check-certificate https://github.com/First-Cloud-Journey/000066-serverlesssample/raw/4d04388765da70407551111e12a23d55f4e81347/theme-park-backend.zip
 unzip theme-park-backend.zip
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00026.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00026.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Tiếp theo chúng ta sẽ sử dụng <strong>SAM CLI</strong> để triển khai phần hạ tầng đầu tiên.</li>
 </ol>
@@ -945,7 +945,7 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-ride-times --ca
 <div class="notices note" ><p>Quá trình này sẽ mất một vài phút để triển khai. Bạn có thể xem tiến trình triển khai trong bảng điều khiển. Chờ cho đến khi bạn thấy thông báo xác nhận Đã tạo / cập nhật thành công <strong>stack - theme-park-ride-times</strong> trong bảng điều khiển trước khi tiếp tục.</p>
 </div>
 
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00027.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00027.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Tiếp tục triển khai phần hạ tầng thứ hai.</li>
 </ol>
@@ -966,7 +966,7 @@ sam deploy --template-file packaged.yaml --stack-name theme-park-backend --capab
 <li>Một AWS IoT thing</li>
 <li>Một số role và policies trong IAM</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-cloud9/00028.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+<p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00028.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Tiếp theo chúng ta sẽ đặt một số biến môi trường đại diện cho tên tùy chỉnh của các tài nguyên được triển khai trong tài khoản của bạn. Các lệnh này sử dụng AWS CLI để truy xuất tên tài nguyên CloudFormation và sau đó xây dựng các biến môi trường bằng cách sử dụng các lệnh thao tác chuỗi Linux <strong>grep</strong> và <strong>cut</strong>. Điều này làm cho việc nhập các lệnh triển khai trong các mô-đun sau này trở nên dễ dàng hơn. Tiếp tục chạy các lệnh dưới đây trong  terminal  của Cloud9.</li>
 </ol>
@@ -979,7 +979,7 @@ echo $FINAL_BUCKET
 echo $PROCESSING_BUCKET
 echo $UPLOAD_BUCKET
 echo $DDB_TABLE
-</code></pre><p><img src="/images/2-Prerequiste/2.1-cloud9/00029.png?featherlight=false&amp;width=90pc" alt="Cloud9"></p>
+</code></pre><p><img alt="Cloud9" src="/images/2-Prerequiste/2.1-cloud9/00029.png?featherlight=false&width=90pc"></p>
 <p>Bước tiếp theo chúng ta sẽ điền thông tin chuyến đi vào DynamoDB Table.</p>
 
 
@@ -1398,19 +1398,19 @@ echo $DDB_TABLE
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701082909"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701082909"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701082909"></script>
-    <script src="/js/jquery.sticky.js?1701082909"></script>
-    <script src="/js/featherlight.min.js?1701082909"></script>
-    <script src="/js/highlight.pack.js?1701082909"></script>
+    <script src="/js/clipboard.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733805990"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733805990"></script>
+    <script src="/js/jquery.sticky.js?1733805990"></script>
+    <script src="/js/featherlight.min.js?1733805990"></script>
+    <script src="/js/highlight.pack.js?1733805990"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701082909"></script>
-    <script src="/js/learn.js?1701082909"></script>
-    <script src="/js/hugo-learn.js?1701082909"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733805990"></script>
+    <script src="/js/learn.js?1733805990"></script>
+    <script src="/js/hugo-learn.js?1733805990"></script>
 
-    <link href="/mermaid/mermaid.css?1701082909" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701082909"></script>
+    <link href="/mermaid/mermaid.css?1733805990" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733805990"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
