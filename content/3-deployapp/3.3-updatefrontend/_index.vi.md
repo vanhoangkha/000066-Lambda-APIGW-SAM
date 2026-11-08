@@ -53,7 +53,7 @@ git push
 ![Cloud9](/images/2-Prerequiste/2.1-cloud9/00041.png?featherlight=false&width=90pc)
 
 {{% notice tip %}}
-Nếu trình duyệt cache lại trang cũ, bạn có thể ấn phím F5 để thực hiện refresh (Windows) hoặc ⌘ Cmd và ⇧ Shift key sau đó nhấn R (Mac) để thực hiện hard refresh.
+Nếu trình duyệt cache lại trang cũ, bạn có thể ấn phím F5 để thực hiện refresh (Windows) hoặc Cmd và ⇧ Shift key sau đó nhấn R (Mac) để thực hiện hard refresh.
 {{% /notice %}}
 
 Trong phần này, chúng ta đã:

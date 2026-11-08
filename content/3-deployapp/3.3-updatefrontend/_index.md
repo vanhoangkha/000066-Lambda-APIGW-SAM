@@ -53,7 +53,7 @@ git push
 ![Cloud9](/images/2-Prerequiste/2.1-cloud9/00041.png?featherlight=false&width=90pc)
 
 {{% notice tip %}}
-If the browser caches the old page again, you can press F5 key to do a refresh (Windows) or ⌘ Cmd and ⇧ Shift key then press R (Mac) to perform a hard refresh.
+If the browser caches the old page again, you can press F5 key to do a refresh (Windows) or Cmd and ⇧ Shift key then press R (Mac) to perform a hard refresh.
 {{% /notice %}}
 
 In this section, we have:

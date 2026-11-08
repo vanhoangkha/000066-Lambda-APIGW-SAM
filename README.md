@@ -1,4 +1,4 @@
-# ⚡ Lambda + API Gateway with SAM
+# Lambda + API Gateway with SAM
 
 Build serverless APIs with Lambda, API Gateway, and SAM.
 
@@ -8,7 +8,7 @@ This is a hands-on workshop from the **AWS First Cloud Journey** series, designe
 
 ## Workshop
 
-📖 **[Start the workshop](https://vanhoangkha.github.io/000066-Lambda-APIGW-SAM/)**
+**[Start the workshop](https://vanhoangkha.github.io/000066-Lambda-APIGW-SAM/)**
 
 ## Prerequisites
 
